@@ -2,15 +2,12 @@ package Testcases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 import Resources.BaseClass;
 import PageObjectModel.LoginPageObjects;
 import PageObjectModel.SignupPageObjects;
 import Resources.CommonMethods;
+import Resources.Constants;
 
 public class SignupTestCases extends BaseClass {
 
@@ -28,7 +25,7 @@ public class SignupTestCases extends BaseClass {
 	
 	spo.enterLastName().sendKeys(Constants.LastName);
 	
-	spo.enterJobTitle().sendKeys(Constants.JobTitle);
+	spo.enterJobTitle().sendKeys(Constants.jobTitle);
 	
 	spo.ClickOnNextButton().click();
 	
@@ -41,6 +38,6 @@ public class SignupTestCases extends BaseClass {
 	spo.ClickOnNextButton().click();
 	
 	
-	  CommonMethods.verifyAssertions(spo.signupPageConfirmation(),constants.expectedTextSignupText,"valid signup text is not showing");     
+	  CommonMethods.verifyAssertions(spo.signupPageConfirmation(),Constants.expectedTextSignupText,"valid signup text is not showing");     
 }
 }

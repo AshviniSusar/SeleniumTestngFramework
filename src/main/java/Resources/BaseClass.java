@@ -13,12 +13,14 @@ public class BaseClass {
 
 	public WebDriver driver;
 	
+	public Properties prop;
+	
 	public void initializeDriver() throws IOException {
 		
 		//to read the data
 		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 
-		Properties prop = new Properties();
+		 prop = new Properties();
 		
 		prop.load(fs);
 		

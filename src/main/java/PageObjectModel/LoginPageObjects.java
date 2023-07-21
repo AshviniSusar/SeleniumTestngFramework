@@ -29,7 +29,7 @@ public class LoginPageObjects {
 
 	}
 
-	public WebElement enterLogin() {
+	public WebElement ClickOnLogin() {
 
 		return driver.findElement(login);
 	}

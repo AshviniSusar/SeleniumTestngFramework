@@ -1,18 +1,14 @@
 package Testcases;
 
 import java.io.IOException;
-import java.sql.Driver;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 import PageObjectModel.LoginPageObjects;
 import Resources.BaseClass;
 import Resources.CommonMethods;
-import bsh.org.objectweb.asm.Constants;
+import Resources.Constants;
+
 
 public class LoginTestCase extends BaseClass {
 
@@ -26,7 +22,7 @@ public class LoginTestCase extends BaseClass {
 	lpo.ClickOnLogin().click();
 	
 	
-	CommonMethods.verifyAssertions(lpo.errorMessage(),constants.expectedTextErrorMessage,"Valid Error message is not showing");     
+	CommonMethods.verifyAssertions(lpo.errorMessage(),Constants.expectedTextErrorMsg,"Valid Error message is not showing");     
 	}
 	
 	 @DataProvider

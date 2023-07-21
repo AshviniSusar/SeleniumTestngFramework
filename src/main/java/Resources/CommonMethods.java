@@ -13,11 +13,11 @@ public class CommonMethods {
 		  s.selectByIndex(index);
 	}
 	
-	public static void selectDropdownWithVisisbleText(WebElement element,String visible Text) {
+	public static void selectDropdownWithVisisbleText(WebElement element,String visibleText) {
 		
 		WebElement a = element;
 		Select s= new Select(a);
-		s.selectByVisibleText(VisibleText);
+		s.selectByVisibleText(visibleText);
 	}
 
 	public static void verifyAssertions(WebElement actual,String expectedText,String message) {
