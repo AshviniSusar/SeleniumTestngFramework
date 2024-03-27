@@ -3,18 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="Testcases.LoginTestCase">
+        <methods>
+          <include name="launchbrowserandURL"/>
+          <include name="verifyLogin" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- Testcases.LoginTestCase -->
       <class name="Testcases.SignupTestCases">
         <methods>
           <include name="launchbrowserandURL"/>
           <include name="verifySignup"/>
         </methods>
       </class> <!-- Testcases.SignupTestCases -->
-      <class name="Testcases.LoginTestCase">
-        <methods>
-          <include name="launchbrowserandURL"/>
-          <include name="verifyLogin"/>
-        </methods>
-      </class> <!-- Testcases.LoginTestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
